@@ -130,15 +130,13 @@ def plane_sweep_gauss(im_l,im_r,start,steps,wid):
 
 
 
-CASE = 1
 
-if CASE == 1:
-    IL,IR,Kl,Kr,bl = case_one()
-    im_l = np.array(Image.open('esquerda.ppm').convert('L'),'f')
-    im_r = np.array(Image.open('direita.ppm').convert('L'),'f')
-    # starting displacement and steps
-    steps = 45
-    start = 10 
+IL,IR,Kl,Kr,bl = case_one()
+im_l = np.array(Image.open('esquerda.ppm').convert('L'),'f')
+im_r = np.array(Image.open('direita.ppm').convert('L'),'f')
+# starting displacement and steps
+steps = 45
+start = 10 
 
 
 fm = Kl[0,0]
@@ -191,8 +189,8 @@ ax.set_xlabel('X Label')
 ax.set_ylabel('Y Label')
 ax.set_zlabel('Z Label')
 
-if CASE ==1:
-    ax.view_init(elev=-23,azim=-91)
+
+ax.view_init(elev=-23,azim=-91)
 
 
 fig = plt.figure(figsize=(10,10))
@@ -205,8 +203,8 @@ ax.set_zlabel('Z Label')
 
 
 
-if CASE ==1:
-    ax.view_init(elev=-57,azim=-91)
+
+ax.view_init(elev=-57,azim=-91)
     
     
 plt.show()
